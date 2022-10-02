@@ -41,6 +41,7 @@ def singleMacroCraft():
 def doubleMacroCraft():
     global reps, craftBtnPos
     for x in range(reps):
+        print("double craft", x)
         pyautogui.mouseDown(craftBtnPos)
         pyautogui.sleep(0.2)
         pyautogui.mouseUp(craftBtnPos)

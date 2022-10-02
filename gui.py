@@ -193,8 +193,7 @@ if __name__ == '__main__':
     doubleMacro2DurEntry = tk.Entry(frame)
     doubleMacro2DurEntry.insert(0, config["CraftParams"]["doubleDur2"])
 
-    tk.Button(frame, text="Start Double Macro Craft!", command=screenIO.doubleMacroCraft).grid(row=8, column=0)
-
+    tk.Button(frame, text="Start Double Macro Craft!", command=doubleMacroCraft).grid(row=8, column=0)
     cursorSetWindowBtn.pack()
 
     if screenIO.craftBtnPos != (0, 0) and (screenIO.singleMacroPos != (0, 0) or (
@@ -208,5 +207,7 @@ if __name__ == '__main__':
 
     progressLabel = tk.Label(frame).grid(row=9, column=0)
     tk.Label(frame, text="Made by ComfyLenny", fg="grey").grid(row=10, column=0)
+
+    window.protocol("WM_DELETE_WINDOW", exit)
 
     window.mainloop()
